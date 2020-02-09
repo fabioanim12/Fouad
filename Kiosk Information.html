@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiosk Information</title>
+    <meta name="generator" content="DA-Formmaker 4.10.5">
+    <!--TEMPLATE:4.2-->    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>    
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js"></script>
+
+    <script>
+        $(function () {
+            
+            
+            });
+    </script>  
+
+    <style type="text/css">
+
+
+        body { background-color:#f8f9fa; color:#000000; font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size: 12pt; }
+h1 { color:#FF0000; font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size:18pt; }
+p,li { color:#000000; font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size:12pt; }
+.control-label { color:#000000; font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; font-size:12pt; }
+.internal { display: none; }
+
+
+        .captcha {
+            width: 15%;
+            min-width: 120px;
+            display: inline;
+        }
+
+        .form-control {
+            margin-bottom: 5px;
+        }
+
+        .textend {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox {
+            margin-top: 0px;
+        }
+
+        .radio {
+            margin-top: 0px;
+        }
+
+        .zwtext {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .input-file {
+            border-width: 0px;
+            height: 100%;
+            background-color: transparent;
+        }
+
+        body {
+        	margin-top: 15px;
+        	line-height: 1.5 !important;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+        }
+
+
+        
+
+    </style>
+
+    <script type="text/javascript">
+    function addHiddenField(formID, name, value)
+{
+	var input = document.createElement("input");
+	input.setAttribute("type", "hidden");
+	input.setAttribute(name, "name_you_want");
+	input.setAttribute(value, "value_you_want");
+	document.getElementById(formID).appendChild(input);
+}
+
+function GetCookie(cookie_name)
+{
+  if (document.cookie.length>0)
+    {
+    cookie_start=document.cookie.indexOf(cookie_name + "=");
+    if (cookie_start!=-1)
+      { 
+      cookie_start=cookie_start + cookie_name.length+1; 
+      cookie_end=document.cookie.indexOf(";",cookie_start);
+      if (cookie_end==-1) cookie_end=document.cookie.length;
+      return unescape(document.cookie.substring(cookie_start,cookie_end));
+      } 
+    }
+  return "";
+}
+
+function str_replace(search, replace, subject) {
+	return subject.split(search).join(replace);
+}
+    </script>
+
+
+    <!-- DAFORMJSBEGIN -->
+    <!-- JSCAPTCHAREFRESH -->
+
+    <script type="text/javascript">
+
+        function SetCookieValues() {
+          
+}
+
+    function SetCookies() {
+      
+}
+
+    </script>
+
+
+    <script type="text/javascript">
+function chkFormular()
+{
+if(document.DAFORM.first_name.value.trim() == "")  {
+alert("Please enter a value in the field First Name !");
+document.DAFORM.first_name.focus();
+return false;
+}
+
+if(document.DAFORM.surname.value.trim() == "")  {
+alert("Please enter your name.");
+document.DAFORM.surname.focus();
+return false;
+}
+
+if(document.DAFORM.kiosk_Location.value.trim() == "")  {
+alert("Please enter a value in the field kiosk Location !");
+document.DAFORM.kiosk_Location.focus();
+return false;
+}
+
+var Option = false;
+for (i = 0;  i < document.DAFORM.Business_Number.length;  i++)
+  {
+    if (document.DAFORM.Business_Number[ i ].checked)
+        Option = true;
+  }
+  if (!Option)
+  {
+alert("Please select one of the following options: Business Number ");
+    return (false);
+  }
+
+var Option = false;
+for (i = 0;  i < document.DAFORM.ECR_Name.length;  i++)
+  {
+    if (document.DAFORM.ECR_Name[ i ].checked)
+        Option = true;
+  }
+  if (!Option)
+  {
+alert("Please select one of the following options: ECR User Name ");
+    return (false);
+  }
+
+var Option = false;
+for (i = 0;  i < document.DAFORM.Open_UI.length;  i++)
+  {
+    if (document.DAFORM.Open_UI[ i ].checked)
+        Option = true;
+  }
+  if (!Option)
+  {
+alert("Please select one of the following options: Open UI ");
+    return (false);
+  }
+
+if((isNaN(str_replace(",",".",document.DAFORM.Data_Dongel_IMEI.value))) || (document.DAFORM.Data_Dongel_IMEI.value == ""))  {
+alert("Please enter a value in the field Data Dongel IMEI  !");
+document.DAFORM.Data_Dongel_IMEI.focus();
+return false;
+}
+
+if((isNaN(str_replace(",",".",document.DAFORM.Data_Dongel_Sim_Serial_Number.value))) || (document.DAFORM.Data_Dongel_Sim_Serial_Number.value == ""))  {
+alert("Please enter a value in the field Data Dongel Sim Serial Number !");
+document.DAFORM.Data_Dongel_Sim_Serial_Number.focus();
+return false;
+}
+
+	return true;
+}
+</script>
+
+
+    <!-- JSCRIPT2 -->
+    <!-- DAFORMJSEND -->
+    
+</head>
+<body onLoad="SetCookieValues();">
+  
+<div class="container mainContainer" style="width:80%"> 
+<!-- FORMTITLE_BEGIN -->
+<div class="row">
+    <div class="col-md-12"> 
+      <h1>Kiosk Information</h1>
+    </div>
+</div>
+<!-- FORMTITLE_END -->
+
+
+  <form action="https://www.ekiwi-scripts.de/form/v4/formmail_v4.php" method="POST" name="DAFORM" onSubmit="SetCookies();return chkFormular();" enctype="multipart/form-data" target="_self">
+  <input type="hidden" name="formid" value="797120">
+  <input type="hidden" name="settings" value="cXZ7ZHJrY2Vicg==">
+  <input type="hidden" name="redirect" value="https://www.ekiwi.de/form/danke.htm">
+  <input type="hidden" name="subject" value="Kiosk Information">
+  <input type="hidden" name="admin" value="cXZ1fnh2eX56JldwenZ+ezl0eHo=">
+  <input type="hidden" name="admin1" value="">
+  <input type="hidden" name="admin2" value="">
+  <input type="hidden" name="typemail" value="html">
+  <input type="hidden" name="crypt" value="1">
+  <input type="hidden" name="conf_csv" value="0">
+  <input type="hidden" name="einleittext" value="">
+  <input type="hidden" name="conf_MailtextEnd" value="">
+  <input type="hidden" name="copyfields" value="-1">  
+  <input type="hidden" name="copyip" value="-1">
+  <input type="hidden" name="hide_empty_fields" value="0">
+  <input type="hidden" name="settings_encoding" value="utf-8">  
+  <input type="hidden" name="conf_pdf" value="0">
+  <input type="hidden" name="conf_lang" value="en">
+  <input type="hidden" name="ReturnToSender" value="0">
+   <input type="hidden" name="label__first_name" value="Rmlyc3QgTmFtZQ==">
+   <input type="hidden" name="label__surname" value="U3VybmFtZQ==">
+   <input type="hidden" name="label__kiosk_Location" value="a2lvc2sgTG9jYXRpb24=">
+   <input type="hidden" name="label__Email" value="Vm9kYWZvbmUgRW1haWw=">
+   <input type="hidden" name="label__Vodafone_Email_status" value="Vm9kYWZvbmUgRW1haWwgc3RhdHVz">
+   <input type="hidden" name="label__Business_Phone" value="QnVzaW5lc3MgTnVtYmVy">
+   <input type="hidden" name="label__Business_Number" value="QnVzaW5lc3MgTnVtYmVy">
+   <input type="hidden" name="label__ECR_Name" value="RUNSIFVzZXIgTmFtZQ==">
+   <input type="hidden" name="label__ECR_User_Name" value="RUNSIFVzZXIgTmFtZQ==">
+   <input type="hidden" name="label__ECR_Localisation_Sowing" value="RUNSIExvY2FsaXNhdGlvbiBTb3dpbmc=">
+   <input type="hidden" name="label__ECR_IMEI" value="RUNSIElNRUk=">
+   <input type="hidden" name="label__ECR_Sim_serial_Number" value="RUNSIFNpbSBzZXJpYWwgTnVtYmVy">
+   <input type="hidden" name="label__Open_UI" value="T3BlbiBVSQ==">
+   <input type="hidden" name="label__Open_UI_IMEI" value="T3BlbiBVSSBJTUVJ">
+   <input type="hidden" name="label__Data_Dongel_IMEI" value="RGF0YSBEb25nZWwgSU1FSSA=">
+   <input type="hidden" name="label__Data_Dongel_Sim_Serial_Number" value="RGF0YSBEb25nZWwgU2ltIFNlcmlhbCBOdW1iZXI=">
+   <input type="hidden" name="label__Kiosk_Laptop_IP_Address" value="S2lvc2sgTGFwdG9wIElQIEFkZHJlc3M=">
+
+  
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+		<label for="first_name" class="control-label">First Name<span style="color: red;"> *</span></label>
+		<input type="text" name="first_name" class="form-control" id="first_name" value="" maxLength="100">
+<br/>
+	</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+		<label for="surname" class="control-label">Surname<span style="color: red;"> *</span></label>
+		<input type="text" name="surname" class="form-control" id="surname" value="" maxLength="100">
+<br/>
+	</div>
+</div>
+</div>
+
+<div class="form-group">
+		<label for="kiosk_Location" class="control-label">kiosk Location<span style="color: red;"> *</span></label>
+		<input type="text" name="kiosk_Location" class="form-control" id="kiosk_Location" value="" maxLength="30">
+<br/>
+	</div>
+<div class="row">
+<div class="col-md-4">
+<div class="form-group">
+		<label for="Email" class="control-label">Vodafone Email</label>
+		<input type="text" name="Email" class="form-control" id="Email" value="" maxLength="200">
+<br/>
+	</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+	<label for="Vodafone_Email_status" class="control-label">Vodafone Email status</label>
+	<select id="Vodafone_Email_status" name="Vodafone_Email_status" class="form-control" size="1">
+		<option>working</option>
+		<option>Not working</option>
+		<option>I dont have Vodafone Email</option>
+	</select> 
+</div>
+
+</div>
+<div class="col-md-4">
+<div class="form-group">
+		<label for="Business_Phone" class="control-label">Business Number</label>
+		<input type="text" name="Business_Phone" class="form-control" id="Business_Phone" value="" maxLength="100">
+<br/>
+	</div>
+</div>
+</div>
+
+<div class="form-group">
+		<label for="Business_Number" class="control-label">Business Number<span style="color: red;"> *</span></label><br>
+		<input type="radio" name="Business_Number" value="I have Business Number" id="Business_Number0">&nbsp;<label for="Business_Number0" class="control-label">I have Business Number</label><br>
+		<input type="radio" name="Business_Number" value="I dont Have Business Number" id="Business_Number1">&nbsp;<label for="Business_Number1" class="control-label">I dont Have Business Number</label><br>
+
+	</div>
+<div class="form-group">
+	<hr>
+<h3>Data Information</h3>
+</div>
+
+<div class="form-group">
+		<label for="ECR_Name" class="control-label">ECR User Name<span style="color: red;"> *</span></label><br>
+		<input type="radio" name="ECR_Name" value="I have ECR User Name " id="ECR_Name0">&nbsp;<label for="ECR_Name0" class="control-label">I have ECR User Name </label><br>
+		<input type="radio" name="ECR_Name" value="I have but is Not Working" id="ECR_Name1">&nbsp;<label for="ECR_Name1" class="control-label">I have but is Not Working</label><br>
+		<input type="radio" name="ECR_Name" value="I dont Have ECR User Name" id="ECR_Name2">&nbsp;<label for="ECR_Name2" class="control-label">I dont Have ECR User Name</label><br>
+
+	</div>
+<div class="form-group">
+		<label for="ECR_User_Name" class="control-label">ECR User Name</label>
+		<input type="text" name="ECR_User_Name" class="form-control" id="ECR_User_Name" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="ECR_Localisation_Sowing" class="control-label">ECR Localisation Sowing</label>
+		<input type="text" name="ECR_Localisation_Sowing" class="form-control" id="ECR_Localisation_Sowing" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="ECR_IMEI" class="control-label">ECR IMEI</label>
+		<input type="text" name="ECR_IMEI" class="form-control" id="ECR_IMEI" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="ECR_Sim_serial_Number" class="control-label">ECR Sim serial Number</label>
+		<input type="text" name="ECR_Sim_serial_Number" class="form-control" id="ECR_Sim_serial_Number" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="Open_UI" class="control-label">Open UI<span style="color: red;"> *</span></label><br>
+		<input type="radio" name="Open_UI" value="I have Open UI" id="Open_UI0">&nbsp;<label for="Open_UI0" class="control-label">I have Open UI</label><br>
+		<input type="radio" name="Open_UI" value="I have but is Not work" id="Open_UI1">&nbsp;<label for="Open_UI1" class="control-label">I have but is Not work</label><br>
+		<input type="radio" name="Open_UI" value="I Dont Have OPEN UI " id="Open_UI2">&nbsp;<label for="Open_UI2" class="control-label">I Dont Have OPEN UI </label><br>
+
+	</div>
+<div class="form-group">
+		<label for="Open_UI_IMEI" class="control-label">Open UI IMEI</label>
+		<input type="text" name="Open_UI_IMEI" class="form-control" id="Open_UI_IMEI" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="Data_Dongel_IMEI" class="control-label">Data Dongel IMEI <span style="color: red;"> *</span></label>
+		<input type="text" name="Data_Dongel_IMEI" class="form-control" id="Data_Dongel_IMEI" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="Data_Dongel_Sim_Serial_Number" class="control-label">Data Dongel Sim Serial Number<span style="color: red;"> *</span></label>
+		<input type="text" name="Data_Dongel_Sim_Serial_Number" class="form-control" id="Data_Dongel_Sim_Serial_Number" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+		<label for="Kiosk_Laptop_IP_Address" class="control-label">Kiosk Laptop IP Address</label>
+		<input type="text" name="Kiosk_Laptop_IP_Address" class="form-control" id="Kiosk_Laptop_IP_Address" value="" maxLength="100">
+<br/>
+	</div>
+<div class="form-group">
+	<p style="color:red;">Thnak you for The Help </p>
+<hr>
+</div>
+
+<div class="row internal">
+	<div class="col-md-2">
+		<label for="internal" class="control-label"></label>
+	</div>
+	<div class="col-md-10">
+		<input type="text" name="internal_value" class="form-control" id="internal_value" value="" maxLength="50">
+	</div>
+</div>
+
+<!-- CAPTCHA -->
+
+<p class="textend"></p>
+
+<hr>
+
+<div class="form-group">
+      <button type="submit" class="btn btn-success">Send</button>
+      <button type="reset" class="btn btn-danger">Reset</button>
+      <!-- PRINTBUTTON -->
+</div>
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+
+</script>
+<script>
+// Add the following code if you want the name of the file appear on select
+$(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+
+</body>
+</html>
